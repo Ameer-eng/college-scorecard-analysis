@@ -1,0 +1,30 @@
+---
+title: "College Scorecard Data Analysis"
+author: "Ameer Qaqish"
+date: "2023-12-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Dataset
+Here we analyze the College Scorecard dataset, a government collected dataset available at https://collegescorecard.ed.gov/data/. Specifically, we analyze the "Most Recent Institution-Level Data", which has aggregate data for each institution, including information on institutional characteristics, enrollment, student aid, costs, and student outcomes.
+
+## Test Scores
+The first thing we look at are test scores and admission rates. We investigate the relationship between admission rate and average ACT score and between admission rate and average SAT verbal score. Scatterplots are shown below.
+
+![Admission Rate vs ACT Score](figures/admission-rate-vs-ACT.png)
+![Admission Rate vs SAT Verbal Score](figures/admission-rate-vs-SAT.png)
+
+It appears that mean admissions rate does decrease significantly with test scores, and that the decrease is more pronounced in the range of 700+ SAT score. To judge this more formally, we should fit a statistical model.
+
+## Earnings
+Here we analyze earnings after 10 years of matriculation. Some figures are below.
+
+![Earnings 10 years after matriculation](figures/earnings_after_10_years.png)
+
+![Quartiles for top 20 universities by earnings](figures/top_20_earnings_quartiles.png)
+
+It appears that median earnings are higher for public and private non-profit colleges than for private for-profit universities. 
