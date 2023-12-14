@@ -18,7 +18,7 @@ The first thing we look at are test scores and admission rates. We investigate t
 ![Admission Rate vs ACT Score](figures/admission-rate-vs-ACT.png)
 ![Admission Rate vs SAT Verbal Score](figures/admission-rate-vs-SAT.png)
 
-It appears that mean admissions rate does decrease significantly with test scores, and that the decrease is more pronounced in the range of 700+ SAT score. To judge this more formally, we should fit a statistical model.
+It appears that mean admissions rate does decrease significantly with test scores, and that the decrease is more pronounced in the range of 700+ SAT verbal score.
 
 ## Earnings
 Here we analyze earnings after 10 years of matriculation. Some figures are below.
@@ -28,3 +28,6 @@ Here we analyze earnings after 10 years of matriculation. Some figures are below
 ![Quartiles for top 20 universities by earnings](figures/top_20_earnings_quartiles.png)
 
 It appears that median earnings are higher for public and private non-profit colleges than for private for-profit universities. 
+
+## Future Work
+There are a lot more attributes to analyze in this dataset. Also, we can ask whether higher median earnings are associated with lower acceptance rates and higher SAT scores. We should perform a regression to asses the influence of various factors on earnings.

@@ -46,10 +46,10 @@ ggsave(filename = "figures/earnings_after_10_years.png", plot = earnings_after_1
 
 top_20_earnings_quartiles = ggplot(earnings[1:20,], aes(x=College, ymin=e10, lower=e25, middle=e50, upper=e75, ymax=e90)) +
   geom_boxplot(stat="identity", fill="#53cfff") + 
-  geom_text(aes(x=College, y=e75-5000, ymax=e75, hjust=0.95, label=paste0("$", e75)), size=4) + 
+  geom_text(aes(x=College, y=e75-2000, ymax=e75, hjust=0.95, label=paste0("$", e75)), size=4) + 
   theme_light(base_size=16) +
   theme(axis.text.y = element_text(hjust=0, color="black")) +
   coord_flip() +
   xlab("") + ylab("") +
   ggtitle("Top Quartile Earnings 10 Years After Matriculation ($)")
-ggsave(filename = "figures/top_20_earnings_quartiles.png", plot = top_20_earnings_quartiles, device = "png")
+ggsave(filename = "figures/top_20_earnings_quartiles.png", plot = top_20_earnings_quartiles, device = "png", width = 12, height = 12)
