@@ -11,11 +11,11 @@ Then to start the docker container and the RStudio server run
 ```
 docker run --rm -p 8787:8787 -v .:/home/rstudio -it my-rockerverse-image
 ```
-To generate the report, use the terminal (accessible within the RStudio IDE) to run
+Visit http://localhost:8787 in your browser and use the password given to you when starting the docker container to access the RStudio development environment.  To generate the report, use the terminal, accessible within the RStudio IDE, to run
 ```
 make clean
 ```
 ```
 make report.html
 ```
-The report is now generated in the report.html file. You can also visit http://localhost:8787 in your browser and use the password given to you when starting the docker container to access the RStudio development environment.
+The report is now generated in the report.html file.
