@@ -1,16 +1,21 @@
+This project is an analysis of the College Scorecard dataset, which is available at https://collegescorecard.ed.gov/data/. To make the analysis reproducible, it is done inside a docker container.
+
+Using This Repository
+=====================
+The analysis and writeup can be generated via the following steps.
 To build the docker container, run
 ```
 docker build -t my-rockerverse-image .
 ```
-Then to start the RStudio server run
+Then to start the docker container and the RStudio server run
 ```
 docker run --rm -p 8787:8787 -v .:/home/rstudio -it my-rockerverse-image
 ```
-To generate the figures, use the terminal interface in RStudio to run
+To generate the report, use the terminal (accessible within the RStudio IDE) to run
 ```
 make clean
 ```
-then
 ```
-make all
+make report.html
 ```
+The report is now generated in the report.html file. You can also visit http://localhost:8787 in your browser and use the poassword given to you when starting the docker container to access the RStudio development environment.
