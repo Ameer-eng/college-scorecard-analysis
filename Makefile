@@ -17,3 +17,6 @@ generate-figures: figures/admission-rate-vs-SAT.png figures/admission-rate-vs-AC
 
 figures/admission-rate-vs-SAT.png figures/admission-rate-vs-ACT.png: source-data/Most-Recent-Cohorts-Institution.csv admission-rates-vs-test-scores.R
 	Rscript admission-rates-vs-test-scores.R
+
+figures/earnings_after_10_years.png figures/top_20_earnings_quartiles.png: source-data/Most-Recent-Cohorts-Institution.csv earnings.R
+	Rscript earnings.R
